@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaymin Dabhi | AI Engineer — Agentic AI & RAG Systems Portfolio</title>
+  <meta name="description"
+    content="Portfolio of Jaymin Dabhi, AI Engineer specializing in agentic AI workflows, LangGraph multi-agent orchestration, Text-to-SQL systems, and production RAG pipelines.">
+  <meta name="keywords"
+    content="Jaymin Dabhi, AI Engineer, Agentic AI, LangGraph, RAG, Text-to-SQL, Multi-Agent Systems, LlamaIndex, Vector Database, Qdrant">
+  <meta name="author" content="Jaymin Dabhi">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/diagrams.css">
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100" tabindex="0">
+
+  <!-- Ambient Background Gradients -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-mid-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-left" aria-hidden="true"></div>
+
+  <!-- Global Header Navigation -->
+  <nav id="mainNav" class="navbar navbar-expand-lg fixed-top nav-glass" aria-label="Main Navigation">
+    <div class="container-fluid container-xl">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="#hero">
+        <span class="brand-monogram">JD</span>
+        <div class="d-flex flex-column">
+          <span class="brand-name">Jaymin Dabhi</span>
+          <span class="brand-tag">AI Systems & Agents</span>
+        </div>
+      </a>
+
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
+        aria-controls="navContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 nav-pills-custom">
+          <li class="nav-item">
+            <a class="nav-link active" href="#hero">Overview</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#capabilities">What I Build</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#framework-contributions">Agent Contributions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Systems & Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#frameworks">Tech Ecosystem</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#deep-dive">Technical Deep Dive</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+        </ul>
+
+        <div class="d-flex align-items-center gap-2 ms-lg-2">
+          <a href="https://drive.google.com/file/d/1h9nOte6R_s_iEJdRz24cBmzxjoQjfMjZ/view?usp=drivesdk" 
+             target="_blank" 
+             rel="noopener noreferrer" 
+             class="btn btn-emerald-subtle btn-sm px-3 py-2 d-none d-sm-inline-flex align-items-center gap-1">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+              <polyline points="14 2 14 8 20 8"></polyline>
+              <line x1="16" y1="13" x2="8" y2="13"></line>
+              <line x1="16" y1="17" x2="8" y2="17"></line>
+              <polyline points="10 9 9 9 8 9"></polyline>
+            </svg>
+            <span>Resume</span>
+          </a>
+          <a href="#contact"
+            class="btn btn-outline-cyan btn-sm px-3 py-2 d-none d-sm-inline-flex align-items-center gap-1">
+            <span>Get In Touch</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section position-relative overflow-hidden">
+      <canvas id="agentNetworkCanvas" class="position-absolute top-0 start-0 w-100 h-100" aria-hidden="true"></canvas>
+
+      <div class="container container-xl position-relative z-2">
+        <div class="row align-items-center min-vh-hero pt-5 pb-4">
+          <div class="col-lg-7 text-center text-lg-start pt-5 pt-lg-0">
+            <div class="d-inline-flex align-items-center gap-2 px-3 py-1 rounded-pill status-pill mb-4">
+              <span class="status-indicator"></span>
+              <span class="status-text">AI Engineer &middot; Specializing in Agent Frameworks & RAG</span>
+            </div>
+
+            <h1 class="display-4 hero-headline mb-3">
+              AI Engineer building <br class="d-none d-md-inline">
+              <span class="text-gradient-cyan">Agentic AI Systems</span>
+            </h1>
+
+            <p class="hero-subheadline mb-3 text-secondary-light">
+              Designing RAG pipelines, multi-agent workflows, Text-to-SQL systems, and production-oriented LLM
+              applications.
+            </p>
+
+            <p class="hero-description text-muted-custom mb-4 pe-lg-4">
+              “I build AI systems where LLMs are combined with retrieval, tools, structured data, validation, and
+              orchestration frameworks to solve real engineering problems.”
+            </p>
+
+            <!-- Hero CTAs -->
+            <div class="d-flex flex-wrap items-center justify-content-center justify-content-lg-start gap-3 mb-4">
+              <a href="#projects" class="btn btn-primary-cyan d-inline-flex align-items-center gap-2">
+                <span>Explore My AI Systems</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M7 17L17 7M17 7H7M17 7V17" />
+                </svg>
+              </a>
+              <a href="#framework-contributions" class="btn btn-secondary-glass d-inline-flex align-items-center gap-2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="3" />
+                  <path d="M3 12h3m12 0h3M12 3v3m0 12v3" />
+                </svg>
+                <span>View Architecture</span>
+              </a>
+            </div>
+
+            <!-- Technology Badges -->
+            <div class="tech-badge-container pt-3 border-top-subtle">
+              <div class="text-uppercase text-xs font-mono text-muted mb-2 tracking-wider">Core Frameworks & Stack:
+              </div>
+              <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start">
+                <span class="badge tech-badge"><span class="badge-dot dot-cyan"></span>LangGraph</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-indigo"></span>LangChain</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-violet"></span>LlamaIndex</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-emerald"></span>OpenAI APIs</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-amber"></span>AWS Bedrock</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-pink"></span>Qdrant</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-blue"></span>PostgreSQL</span>
+                <span class="badge tech-badge"><span class="badge-dot dot-slate"></span>Python</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Interactive Simulation Card -->
+          <div class="col-lg-5 mt-5 mt-lg-0">
+            <div class="hero-visual-card glass-panel p-4 position-relative">
+              <div class="visual-header d-flex justify-content-between align-items-center pb-3 border-bottom-subtle">
+                <div class="d-flex align-items-center gap-2">
+                  <div class="window-dot red"></div>
+                  <div class="window-dot yellow"></div>
+                  <div class="window-dot green"></div>
+                  <span class="font-mono text-xs text-muted-custom ms-2">live_agent_state_machine.py</span>
+                </div>
+                <span class="badge badge-active-agent font-mono text-xs">LangGraph Active</span>
+              </div>
+
+              <!-- Mini interactive visual graph in hero -->
+              <div class="hero-graph-display py-4">
+                <div class="agent-flow-compact">
+                  <div class="flow-compact-node node-user" id="heroNodeQuery">
+                    <div class="node-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                      </svg>
+                    </div>
+                    <div class="node-meta">
+                      <span class="node-label">User Query</span>
+                      <span class="node-sub">Natural Question</span>
+                    </div>
+                  </div>
+
+                  <div class="flow-compact-connector">
+                    <span class="pulse-line"></span>
+                  </div>
+
+                  <div class="flow-compact-node node-router" id="heroNodeRouter">
+                    <div class="node-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M3 12h3m12 0h3M12 3v3m0 12v3" />
+                      </svg>
+                    </div>
+                    <div class="node-meta">
+                      <span class="node-label">Router / Planner</span>
+                      <span class="node-sub">Intent Classifier</span>
+                    </div>
+                  </div>
+
+                  <div class="flow-compact-split">
+                    <div class="split-branch">
+                      <div class="flow-compact-node node-tool" id="heroNodeBranch1">
+                        <div class="node-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                          </svg>
+                        </div>
+                        <div class="node-meta">
+                          <span class="node-label">RAG Pipeline</span>
+                          <span class="node-sub">Qdrant Vector DB</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="split-branch">
+                      <div class="flow-compact-node node-tool" id="heroNodeBranch2">
+                        <div class="node-icon">
+                          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                          </svg>
+                        </div>
+                        <div class="node-meta">
+                          <span class="node-label">SQL Agent</span>
+                          <span class="node-sub">Schema & Validated SQL</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="flow-compact-connector">
+                    <span class="pulse-line"></span>
+                  </div>
+
+                  <div class="flow-compact-node node-validation" id="heroNodeValidation">
+                    <div class="node-icon">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </div>
+                    <div class="node-meta">
+                      <span class="node-label">Output Validation</span>
+                      <span class="node-sub">Syntax & Grounding Check</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="visual-footer pt-3 border-top-subtle d-flex justify-content-between align-items-center">
+                <span class="font-mono text-xs text-muted-custom">State: Ready &middot; Latency: Streamed</span>
+                <span class="font-mono text-xs text-cyan">Workflow Orchestration</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Down Cue -->
+      <div class="scroll-cue text-center pb-3">
+        <a href="#capabilities"
+          class="text-muted-custom text-decoration-none d-inline-flex flex-column align-items-center">
+          <span class="font-mono text-xs mb-1 tracking-wider text-uppercase">Explore System Architecture</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            class="scroll-arrow">
+            <path d="M12 5v14M19 12l-7 7-7-7" />
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <!-- SECTION 1 — AI ENGINEERING PROFILE -->
+    <section id="capabilities" class="py-6 position-relative border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Capabilities & Systems</div>
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-end mb-5">
+          <div>
+            <h2 class="section-title">What I Build</h2>
+            <p class="section-subtitle text-muted-custom mb-0">Production-oriented frameworks and specialized agents
+              built for reliability.</p>
+          </div>
+          <div class="mt-3 mt-md-0">
+            <span class="font-mono text-xs text-cyan border border-cyan-subtle px-3 py-1 rounded-pill bg-cyan-dark">
+              Core Engineering Focus
+            </span>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          <!-- Card 1: Agentic AI -->
+          <div class="col-md-6 col-lg-3">
+            <div class="capability-card glass-panel h-100 p-4">
+              <div class="card-icon-wrap icon-cyan mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path
+                    d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83" />
+                </svg>
+              </div>
+              <h3 class="capability-title h5 mb-3">Agentic AI</h3>
+              <p class="capability-desc text-muted-custom mb-4">
+                Designing workflows where multiple specialized agents collaborate, maintain state across iterations,
+                call deterministic tools, and solve complex multi-step tasks.
+              </p>
+              <div class="capability-taglist font-mono text-xs">
+                <span>LangGraph</span> &middot; <span>State Graphs</span> &middot; <span>Router Agents</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: RAG Systems -->
+          <div class="col-md-6 col-lg-3">
+            <div class="capability-card glass-panel h-100 p-4">
+              <div class="card-icon-wrap icon-indigo mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              </div>
+              <h3 class="capability-title h5 mb-3">RAG Systems</h3>
+              <p class="capability-desc text-muted-custom mb-4">
+                Building document ingestion, chunking strategies, embedding pipelines, semantic vector retrieval,
+                reranking/context curation, and grounded LLM response generation.
+              </p>
+              <div class="capability-taglist font-mono text-xs">
+                <span>Qdrant</span> &middot; <span>LlamaIndex</span> &middot; <span>Context Builder</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Text-to-SQL -->
+          <div class="col-md-6 col-lg-3">
+            <div class="capability-card glass-panel h-100 p-4">
+              <div class="card-icon-wrap icon-emerald mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <ellipse cx="12" cy="5" rx="9" ry="3" />
+                  <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                  <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                </svg>
+              </div>
+              <h3 class="capability-title h5 mb-3">Text-to-SQL</h3>
+              <p class="capability-desc text-muted-custom mb-4">
+                Building systems that translate natural-language questions into validated SQL queries against complex
+                relational databases with intelligent schema pruning and syntax checks.
+              </p>
+              <div class="capability-taglist font-mono text-xs">
+                <span>Schema Reduction</span> &middot; <span>SQL Validation</span> &middot; <span>PostgreSQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4: LLM Engineering -->
+          <div class="col-md-6 col-lg-3">
+            <div class="capability-card glass-panel h-100 p-4">
+              <div class="card-icon-wrap icon-violet mb-4">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="2" y="3" width="20" height="14" rx="2" ry="2" />
+                  <line x1="8" y1="21" x2="16" y2="21" />
+                  <line x1="12" y1="17" x2="12" y2="21" />
+                </svg>
+              </div>
+              <h3 class="capability-title h5 mb-3">LLM Engineering</h3>
+              <p class="capability-desc text-muted-custom mb-4">
+                Working with hosted (OpenAI, Bedrock) and open-source models (Ollama, SQLCoder, vLLM), vector databases,
+                orchestration layers, and production inference infrastructure.
+              </p>
+              <div class="capability-taglist font-mono text-xs">
+                <span>vLLM</span> &middot; <span>Ollama</span> &middot; <span>Docker</span> &middot; <span>APIs</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Distinct Engineering Statement -->
+        <div class="mt-5 text-center">
+          <div class="statement-banner py-4 px-4 px-md-5 rounded-4 glass-panel border border-cyan-subtle">
+            <p class="h4 mb-0 font-weight-600 text-light">
+              “My focus is not only the model — <span class="text-cyan">it is the system surrounding the model.</span>”
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — AI AGENT FRAMEWORK CONTRIBUTIONS -->
+    <section id="framework-contributions" class="py-6 position-relative bg-charcoal-deep border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Core Competency</div>
+        <h2 class="section-title">My Contributions to AI Agent Frameworks</h2>
+        <p class="section-subtitle text-muted-custom mb-5 max-w-750">
+          The projects below demonstrate practical architectural usage, deep integration, and custom workflow design
+          across industry-standard AI agent frameworks.
+        </p>
+
+        <!-- Framework Highlights Grid -->
+        <div class="row g-3 mb-5">
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="framework-mini-badge">
+              <span class="mini-badge-title">LangGraph</span>
+              <span class="mini-badge-sub">Cyclic State Graphs</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="framework-mini-badge">
+              <span class="mini-badge-title">LangChain</span>
+              <span class="mini-badge-sub">Chains & Tools</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="framework-mini-badge">
+              <span class="mini-badge-title">LlamaIndex</span>
+              <span class="mini-badge-sub">Retrieval & Indexes</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="framework-mini-badge">
+              <span class="mini-badge-title">Router Agents</span>
+              <span class="mini-badge-sub">Intent Classification</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="framework-mini-badge">
+              <span class="mini-badge-title">SQL Agents</span>
+              <span class="mini-badge-sub">Schema & Query Logic</span>
+            </div>
+          </div>
+          <div class="col-6 col-md-4 col-lg-2">
+            <div class="framework-mini-badge">
+              <span class="mini-badge-title">Validation Workflows</span>
+              <span class="mini-badge-sub">Pre-Execution Guardrails</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Architecture Visual -->
+        <div class="glass-panel p-4 p-lg-5 mb-5 border-cyan-subtle">
+          <div
+            class="d-flex flex-column flex-md-row justify-content-between align-items-md-center pb-4 border-bottom-subtle mb-4">
+            <div>
+              <h3 class="h4 mb-1 text-light">Agent Orchestration Pipeline</h3>
+              <p class="text-muted-custom text-sm mb-0">Click any component to inspect how state, control, and
+                validation are engineered.</p>
+            </div>
+            <div class="d-flex align-items-center gap-2 mt-3 mt-md-0 font-mono text-xs text-muted-custom">
+              <span class="dot-indicator bg-emerald"></span> Interactive Flow Controller
+            </div>
+          </div>
+
+          <!-- Flow Chart SVG / HTML Container -->
+          <div class="interactive-pipeline-wrapper py-3">
+            <div class="pipeline-track">
+              <!-- Step 1 -->
+              <div class="pipeline-node active" data-step="query" id="node-step-query">
+                <div class="node-number font-mono">01</div>
+                <div class="node-content">
+                  <span class="node-title">User Query</span>
+                  <span class="node-desc">Raw input & conversation history</span>
+                </div>
+                <div class="node-status-chip">Input</div>
+              </div>
+
+              <div class="pipeline-arrow"><span class="flow-pulse"></span></div>
+
+              <!-- Step 2 -->
+              <div class="pipeline-node" data-step="router" id="node-step-router">
+                <div class="node-number font-mono">02</div>
+                <div class="node-content">
+                  <span class="node-title">Router / Planner</span>
+                  <span class="node-desc">Evaluates intent & selects path</span>
+                </div>
+                <div class="node-status-chip">Decision</div>
+              </div>
+
+              <div class="pipeline-arrow"><span class="flow-pulse"></span></div>
+
+              <!-- Step 3 -->
+              <div class="pipeline-node" data-step="agent" id="node-step-agent">
+                <div class="node-number font-mono">03</div>
+                <div class="node-content">
+                  <span class="node-title">Specialized Agent</span>
+                  <span class="node-desc">Executes task-specific logic</span>
+                </div>
+                <div class="node-status-chip">Orchestration</div>
+              </div>
+
+              <div class="pipeline-arrow"><span class="flow-pulse"></span></div>
+
+              <!-- Step 4 -->
+              <div class="pipeline-node" data-step="tools" id="node-step-tools">
+                <div class="node-number font-mono">04</div>
+                <div class="node-content">
+                  <span class="node-title">Tools / Retrieval / DB</span>
+                  <span class="node-desc">Qdrant vector / PostgreSQL schema</span>
+                </div>
+                <div class="node-status-chip">Execution</div>
+              </div>
+
+              <div class="pipeline-arrow"><span class="flow-pulse"></span></div>
+
+              <!-- Step 5 -->
+              <div class="pipeline-node" data-step="validation" id="node-step-validation">
+                <div class="node-number font-mono">05</div>
+                <div class="node-content">
+                  <span class="node-title">Validation</span>
+                  <span class="node-desc">Syntax verification & safety guard</span>
+                </div>
+                <div class="node-status-chip">Guardrail</div>
+              </div>
+
+              <div class="pipeline-arrow"><span class="flow-pulse"></span></div>
+
+              <!-- Step 6 -->
+              <div class="pipeline-node" data-step="reasoning" id="node-step-reasoning">
+                <div class="node-number font-mono">06</div>
+                <div class="node-content">
+                  <span class="node-title">LLM Reasoning</span>
+                  <span class="node-desc">Synthesizes contextualized result</span>
+                </div>
+                <div class="node-status-chip">Synthesis</div>
+              </div>
+
+              <div class="pipeline-arrow"><span class="flow-pulse"></span></div>
+
+              <!-- Step 7 -->
+              <div class="pipeline-node" data-step="response" id="node-step-response">
+                <div class="node-number font-mono">07</div>
+                <div class="node-content">
+                  <span class="node-title">Final Response</span>
+                  <span class="node-desc">Grounded answer or structured JSON</span>
+                </div>
+                <div class="node-status-chip">Output</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Inspection Box for Pipeline -->
+          <div class="pipeline-inspector-box mt-4 p-4 rounded-3 bg-dark-panel border border-subtle"
+            id="pipelineInspectorBox">
+            <div class="d-flex align-items-center justify-content-between mb-2">
+              <span class="badge bg-cyan text-dark font-mono text-xs px-2 py-1" id="inspectorStepBadge">STEP 01 &middot;
+                USER QUERY</span>
+              <span class="font-mono text-xs text-muted-custom" id="inspectorFramework">State Ingestion</span>
+            </div>
+            <h4 class="h5 text-light mb-2" id="inspectorTitle">Ingesting & Structuring Natural Language Input</h4>
+            <p class="text-muted-custom text-sm mb-3" id="inspectorDesc">
+              User questions are sanitized, checked for conversation history context, and converted into an immutable
+              state payload inside LangGraph/LangChain.
+            </p>
+            <div class="p-3 bg-black-subtle rounded-2 font-mono text-xs text-cyan border border-subtle overflow-x-auto"
+              id="inspectorSnippet">
+              State: { query: "Show total trips completed by employees from Delhi", session_id: "usr_99", route: None,
+              schema_subset: None }
+            </div>
+          </div>
+        </div>
+
+        <!-- Architectural Positioning Quote -->
+        <div class="quote-card p-4 p-md-5 rounded-4 glass-panel border-left-cyan">
+          <blockquote class="mb-0">
+            <p class="h5 text-light fst-italic mb-3">
+              “I use agent frameworks as orchestration layers, while designing the actual reasoning workflow, tool
+              interaction, retrieval strategy, validation logic, and system architecture around the application's
+              requirements.”
+            </p>
+            <footer class="text-cyan font-mono text-xs tracking-wider text-uppercase">— Jaymin Dabhi, AI Engineer
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3 — FEATURED PROJECTS -->
+    <section id="projects" class="py-6 position-relative border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Evidence of Contribution</div>
+        <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-end mb-4">
+          <div>
+            <h2 class="section-title">Featured AI Systems</h2>
+            <p class="section-subtitle text-muted-custom mb-0 max-w-750">
+              Four progressively deeper implementations demonstrating hands-on architecture across RAG, Multi-Agent
+              Orchestration, and Production SQL Agents.
+            </p>
+          </div>
+          <!-- Filter Buttons -->
+          <div class="mt-3 mt-lg-0 project-filter-pills d-flex flex-wrap gap-2">
+            <button class="btn btn-sm btn-filter active" data-filter="all">All Systems</button>
+            <button class="btn btn-sm btn-filter" data-filter="rag">RAG Pipelines</button>
+            <button class="btn btn-sm btn-filter" data-filter="agentic">Multi-Agent & SQL</button>
+          </div>
+        </div>
+
+        <!-- Progressive Journey Stepper Indicator -->
+        <div class="progressive-bar-container mb-5 p-3 rounded-3 glass-panel">
+          <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+            <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom">Engineering
+              Progression:</span>
+            <div class="progression-steps d-flex align-items-center gap-2 font-mono text-xs">
+              <span class="prog-step active">01. Enterprise RAG</span>
+              <span class="prog-divider">&rarr;</span>
+              <span class="prog-step active highlight-flag">02. Text-to-SQL Multi-Agent</span>
+              <span class="prog-divider">&rarr;</span>
+              <span class="prog-step">03. Production AI SQL Bot</span>
+              <span class="prog-divider">&rarr;</span>
+              <span class="prog-step">04. Runtime PDF RAG</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- PROJECT GRID -->
+        <div class="row g-4" id="projectsContainer">
+
+          <!-- ==============================================
+               PROJECT 01: Enterprise AI Assistant / Enterprise RAG Chatbot
+               ============================================== -->
+          <div class="col-12 project-item" data-category="rag">
+            <div class="project-card glass-panel p-4 p-lg-5 featured-border">
+              <div
+                class="project-header d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-3 mb-4">
+                <div>
+                  <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                    <span class="badge bg-indigo-subtle text-indigo font-mono text-xs px-2 py-1">PROJECT 01</span>
+                    <span class="badge badge-category">Agentic RAG &middot; Enterprise Search &middot; LLM
+                      Application</span>
+                    <span class="badge badge-flag-strong">Core Project</span>
+                  </div>
+                  <h3 class="project-title h2 text-light mb-2">Enterprise AI Assistant / Enterprise RAG Chatbot</h3>
+                  <p class="project-desc text-muted-custom mb-0">
+                    An enterprise-oriented AI assistant designed to answer questions over organizational knowledge using
+                    retrieval-augmented generation.
+                  </p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-outline-cyan btn-sm btn-deep-dive" data-project-id="p1">
+                    <span>Full Deep Dive (10 Points)</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Visual Architecture Flow for Project 1 -->
+              <div class="architecture-visual-wrapper mb-4 p-4 rounded-3 bg-dark-panel border border-subtle">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom">
+                    End-to-End System Architecture:
+                  </span>
+                  <span class="font-mono text-xs text-cyan">Semantic Ingestion & Retrieval Pipeline</span>
+                </div>
+
+                <div class="arch-flow-diagram">
+                  <div class="arch-node"><span class="arch-tag">01</span><span class="arch-name">Document Loader</span>
+                  </div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node"><span class="arch-tag">02</span><span class="arch-name">Text Processing</span>
+                  </div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node"><span class="arch-tag">03</span><span class="arch-name">Chunking</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node"><span class="arch-tag">04</span><span class="arch-name">Embedding</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node node-highlight-cyan"><span class="arch-tag">05</span><span
+                      class="arch-name">Vector Store (Qdrant)</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node"><span class="arch-tag">06</span><span class="arch-name">Retriever</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node"><span class="arch-tag">07</span><span class="arch-name">Context Builder</span>
+                  </div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node node-highlight-indigo"><span class="arch-tag">08</span><span
+                      class="arch-name">LLM Generation</span></div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node"><span class="arch-tag">09</span><span class="arch-name">Grounded
+                      Response</span></div>
+                </div>
+              </div>
+
+              <div class="row g-4">
+                <!-- What I Personally Built (Highlight Card) -->
+                <div class="col-lg-7">
+                  <div class="personal-contribution-box p-4 rounded-3 h-100 border-left-cyan bg-panel-darker">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <span class="badge bg-cyan text-dark font-mono text-xs">CRITICAL EVIDENCE</span>
+                      <h4 class="h5 mb-0 text-light">What I Personally Built</h4>
+                    </div>
+                    <ul class="contribution-list text-muted-custom text-sm mb-0">
+                      <li><strong>Designed the overall RAG workflow</strong> from raw unstructured document parsing to
+                        grounded generation.</li>
+                      <li><strong>Implemented document ingestion and preprocessing</strong> to normalize heterogeneous
+                        text formats.</li>
+                      <li><strong>Worked on chunking strategies and embedding pipelines</strong>, evaluating boundary
+                        splits and configurable token overlaps.</li>
+                      <li><strong>Integrated vector databases for semantic retrieval</strong>, configuring Qdrant
+                        collections with optimized distance metrics.</li>
+                      <li><strong>Designed retrieval-to-generation flow</strong>, structuring query expansions and
+                        similarity threshold filters.</li>
+                      <li><strong>Integrated LLMs with the retrieval pipeline</strong>, bridging LlamaIndex indexes with
+                        LangChain execution chains.</li>
+                      <li><strong>Worked on prompt/context construction</strong> to enforce adherence to retrieved
+                        sources and minimize hallucination.</li>
+                      <li><strong>Experimented with open-source and hosted LLMs</strong>, testing behavior across OpenAI
+                        APIs and local Ollama instances.</li>
+                      <li><strong>Focused on improving retrieval quality and reducing irrelevant context</strong>,
+                        avoiding token budget exhaustion.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- Engineering Decisions & Technologies -->
+                <div class="col-lg-5">
+                  <div class="d-flex flex-column gap-3 h-100">
+                    <div class="p-3 rounded-3 bg-panel-darker border border-subtle">
+                      <span class="font-mono text-xs text-uppercase tracking-wider text-cyan d-block mb-2">Important
+                        Engineering Decisions</span>
+                      <p class="text-sm text-muted-custom mb-0">
+                        Chunking and embeddings dictate retrieval bounds. If chunk boundaries break semantic units, the
+                        vector representation loses fidelity; if chunks are oversized, the context builder floods the
+                        LLM with irrelevant text, causing retrieval degradation. I prioritized configurable windowing
+                        and context isolation.
+                      </p>
+                    </div>
+
+                    <div class="p-3 rounded-3 bg-panel-darker border border-subtle">
+                      <span
+                        class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-2">Technologies
+                        Used</span>
+                      <div class="d-flex flex-wrap gap-1">
+                        <span class="badge tech-pill">Python</span>
+                        <span class="badge tech-pill">LangChain</span>
+                        <span class="badge tech-pill">LlamaIndex</span>
+                        <span class="badge tech-pill">Qdrant</span>
+                        <span class="badge tech-pill">Vector Database</span>
+                        <span class="badge tech-pill">OpenAI / LLM APIs</span>
+                        <span class="badge tech-pill">Ollama</span>
+                        <span class="badge tech-pill">Embedding Models</span>
+                      </div>
+                    </div>
+
+                    <!-- Interactive Conceptual UI "Ask the System" -->
+                    <div class="p-3 rounded-3 bg-panel-darker border border-subtle">
+                      <div class="d-flex justify-content-between align-items-center mb-2">
+                        <span class="font-mono text-xs text-uppercase tracking-wider text-indigo">Interactive Conceptual
+                          Flow</span>
+                        <span class="font-mono text-xs text-muted-custom">Simulation</span>
+                      </div>
+                      <div class="ask-system-widget">
+                        <div class="input-group input-group-sm mb-2">
+                          <input type="text" id="ragSimInput"
+                            class="form-control bg-dark border-secondary text-light font-mono text-xs"
+                            value="What is the employee travel reimbursement policy?" readonly>
+                          <button class="btn btn-cyan btn-sm font-mono text-xs" id="btnRunRagSim" type="button">Trace
+                            RAG</button>
+                        </div>
+                        <div class="rag-sim-output font-mono text-xs p-2 rounded bg-black text-muted-custom"
+                          id="ragSimOutput">
+                          Click "Trace RAG" to observe Knowledge Retrieval &rarr; Context Builder &rarr; Synthesis.
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================
+               PROJECT 02: Text-to-SQL Multi-Agent System (MOST TECHNICALLY IMPRESSIVE)
+               ============================================== -->
+          <div class="col-12 project-item" data-category="agentic">
+            <div class="project-card glass-panel p-4 p-lg-5 featured-border-strong border-cyan-glow">
+              <div
+                class="project-header d-flex flex-column flex-md-row justify-content-between align-items-md-start gap-3 mb-4">
+                <div>
+                  <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                    <span class="badge bg-cyan text-dark font-mono text-xs px-2 py-1">PROJECT 02 &middot; FLAGSHIP
+                      SYSTEM</span>
+                    <span class="badge badge-category">Multi-Agent AI &middot; Text-to-SQL &middot; Database
+                      Agents</span>
+                    <span class="badge badge-flag-gold">Most Technically Impressive</span>
+                  </div>
+                  <h3 class="project-title h1 text-light mb-2">Text-to-SQL Multi-Agent System</h3>
+                  <p class="project-desc text-muted-custom mb-0">
+                    A multi-agent Text-to-SQL system that converts natural-language questions into SQL queries against a
+                    PostgreSQL database through orchestrated schema filtering, SQL generation, and deterministic syntax
+                    validation.
+                  </p>
+                </div>
+                <div class="d-flex gap-2">
+                  <button class="btn btn-primary-cyan btn-sm btn-deep-dive" data-project-id="p2">
+                    <span>Explore Multi-Agent Breakdown</span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Large Interactive Multi-Agent Architecture Diagram -->
+              <div class="architecture-visual-wrapper mb-4 p-4 rounded-3 bg-dark-panel border border-cyan-subtle">
+                <div
+                  class="d-flex flex-column flex-sm-row justify-content-between align-items-sm-center pb-3 border-bottom-subtle mb-3">
+                  <div>
+                    <span class="font-mono text-xs text-uppercase tracking-wider text-cyan d-block">
+                      LangGraph Stateful Multi-Agent Architecture
+                    </span>
+                    <span class="text-xs text-muted-custom">Interactive Agent State Machine &middot; Click nodes to
+                      inspect agent responsibilities</span>
+                  </div>
+                  <span class="badge bg-dark border border-cyan font-mono text-xs text-cyan mt-2 mt-sm-0">Cyclic State
+                    Graph</span>
+                </div>
+
+                <!-- Node Grid Diagram -->
+                <div class="multi-agent-diagram-grid py-3">
+                  <div class="agent-box active-pulse" id="agentCardRouter" onclick="selectAgentInspector('router')">
+                    <div class="agent-box-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="3" />
+                        <path d="M3 12h3m12 0h3M12 3v3m0 12v3" />
+                      </svg></div>
+                    <div class="agent-box-title">Router Agent</div>
+                    <div class="agent-box-role">Intent Classification & Routing</div>
+                  </div>
+
+                  <div class="agent-diagram-arrow">&rarr;</div>
+
+                  <div class="agent-box" id="agentCardColumn" onclick="selectAgentInspector('column')">
+                    <div class="agent-box-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 3v18M3 9h18M3 15h18" />
+                      </svg></div>
+                    <div class="agent-box-title">Column Selection Agent</div>
+                    <div class="agent-box-role">Schema Metadata Pruning</div>
+                  </div>
+
+                  <div class="agent-diagram-arrow">&rarr;</div>
+
+                  <div class="agent-box" id="agentCardGen" onclick="selectAgentInspector('sqlgen')">
+                    <div class="agent-box-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <polyline points="16 18 22 12 16 6" />
+                        <polyline points="8 6 2 12 8 18" />
+                      </svg></div>
+                    <div class="agent-box-title">SQL Generation Agent</div>
+                    <div class="agent-box-role">SQLCoder / Reasoning LLM</div>
+                  </div>
+
+                  <div class="agent-diagram-arrow">&rarr;</div>
+
+                  <div class="agent-box" id="agentCardVal" onclick="selectAgentInspector('validation')">
+                    <div class="agent-box-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                      </svg></div>
+                    <div class="agent-box-title">SQL Validation</div>
+                    <div class="agent-box-role">Syntax & AST Verification</div>
+                  </div>
+
+                  <div class="agent-diagram-arrow">&rarr;</div>
+
+                  <div class="agent-box" id="agentCardDb" onclick="selectAgentInspector('database')">
+                    <div class="agent-box-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <ellipse cx="12" cy="5" rx="9" ry="3" />
+                        <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
+                        <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
+                      </svg></div>
+                    <div class="agent-box-title">Database Layer</div>
+                    <div class="agent-box-role">PostgreSQL Execution</div>
+                  </div>
+
+                  <div class="agent-diagram-arrow">&rarr;</div>
+
+                  <div class="agent-box" id="agentCardResp" onclick="selectAgentInspector('response')">
+                    <div class="agent-box-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2">
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                        <polyline points="14 2 14 8 20 8" />
+                      </svg></div>
+                    <div class="agent-box-title">Structured Output</div>
+                    <div class="agent-box-role">JSON API Response</div>
+                  </div>
+                </div>
+
+                <!-- Dynamic Agent Inspector View -->
+                <div class="agent-inspector-detail p-3 mt-3 rounded-2 bg-panel-darker border border-subtle"
+                  id="agentInspectorDetail">
+                  <div class="d-flex align-items-center justify-content-between mb-1">
+                    <span class="font-mono text-xs text-cyan fw-bold" id="agentInspTitle">ROUTER AGENT</span>
+                    <span class="font-mono text-xs text-muted-custom" id="agentInspTech">LangGraph Node &middot;
+                      Conditional Edge</span>
+                  </div>
+                  <p class="text-xs text-muted-custom mb-0" id="agentInspDesc">
+                    Determines the type of request (schema inquiry, data query, or out-of-scope non-DB request) and
+                    routes state conditionally to the appropriate downstream agent or fallback node.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Two Column: What I Personally Built + Schema Section -->
+              <div class="row g-4">
+                <!-- What I Personally Built (Dedicated Section) -->
+                <div class="col-lg-6">
+                  <div class="personal-contribution-box p-4 rounded-3 h-100 border-left-cyan bg-panel-darker">
+                    <div class="d-flex align-items-center gap-2 mb-3">
+                      <span class="badge bg-cyan text-dark font-mono text-xs">SYSTEM IMPLEMENTATION</span>
+                      <h4 class="h5 mb-0 text-light">What I Personally Built</h4>
+                    </div>
+                    <ul class="contribution-list text-muted-custom text-sm mb-0">
+                      <li><strong>Designed the multi-agent workflow</strong> utilizing LangGraph state management for
+                        deterministic graph transitions.</li>
+                      <li><strong>Implemented agent-to-agent orchestration</strong> using LangGraph state passing and
+                        conditional edge transitions.</li>
+                      <li><strong>Designed routing logic</strong> to cleanly distinguish relational queries from general
+                        semantic inquiries.</li>
+                      <li><strong>Worked on database metadata/schema handling</strong>, structuring table definitions,
+                        constraints, and relationships.</li>
+                      <li><strong>Implemented column/table selection logic</strong> to prevent prompt token saturation
+                        on complex DB schemas.</li>
+                      <li><strong>Integrated SQL generation models</strong> (SQLCoder and reasoning LLMs) with targeted
+                        few-shot prompts.</li>
+                      <li><strong>Added SQL validation before execution</strong>, inspecting ASTs and syntax to catch
+                        malformed queries prior to DB calls.</li>
+                      <li><strong>Connected the workflow with PostgreSQL</strong>, managing read-only query execution
+                        pipelines.</li>
+                      <li><strong>Designed structured output handling</strong> to return machine-readable JSON payloads
+                        containing execution metadata.</li>
+                      <li><strong>Worked on reducing unnecessary schema information passed to the LLM</strong> to
+                        preserve prompt budget and accuracy.</li>
+                      <li><strong>Debugged and refined agent workflow behavior</strong> across multi-turn cyclic error
+                        recoveries.</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <!-- TEXT-TO-SQL METADATA SECTION (Crucial for Interviews) -->
+                <div class="col-lg-6">
+                  <div class="metadata-explanation-box p-4 rounded-3 h-100 bg-panel-darker border border-subtle">
+                    <div class="d-flex align-items-center justify-content-between mb-3">
+                      <div class="d-flex align-items-center gap-2">
+                        <span class="badge bg-indigo-subtle text-indigo font-mono text-xs">INTERVIEW FOCUS</span>
+                        <h4 class="h5 mb-0 text-light">How the System Understands the Database</h4>
+                      </div>
+                    </div>
+
+                    <div class="arch-flow-diagram metadata-mini-diagram mb-3 py-2">
+                      <div class="arch-node text-xs">Database</div>
+                      <span class="arch-arrow">&rarr;</span>
+                      <div class="arch-node text-xs">Schema Metadata</div>
+                      <span class="arch-arrow">&rarr;</span>
+                      <div class="arch-node text-xs">Tables & Columns</div>
+                      <span class="arch-arrow">&rarr;</span>
+                      <div class="arch-node text-xs">Relationships</div>
+                      <span class="arch-arrow">&rarr;</span>
+                      <div class="arch-node text-xs node-highlight-cyan">Relevant Schema Selection</div>
+                      <span class="arch-arrow">&rarr;</span>
+                      <div class="arch-node text-xs">SQL Generation</div>
+                    </div>
+
+                    <div class="quote-callout p-3 rounded-2 bg-black-subtle border-left-indigo mb-3">
+                      <p class="text-xs text-light mb-0 fst-italic">
+                        “The LLM should not blindly receive the entire database schema for every question. The workflow
+                        attempts to identify relevant schema information before SQL generation.”
+                      </p>
+                    </div>
+
+                    <!-- Step-by-Step Example Walkthrough -->
+                    <div class="metadata-example-card p-3 rounded-2 bg-dark border border-subtle">
+                      <div class="text-xs font-mono text-cyan mb-2">Concrete Query Walkthrough:</div>
+                      <div class="mb-2 p-2 rounded bg-black-subtle text-xs font-mono text-light">
+                        User: <span class="text-cyan">“Show total trips completed by employees from the Delhi
+                          office.”</span>
+                      </div>
+
+                      <!-- Visual Pipeline Sequence -->
+                      <div class="trace-steps-container">
+                        <div class="trace-step">
+                          <span class="trace-step-tag">1. Intent Extraction</span>
+                          <span class="trace-step-val">Aggregate trip count grouped/filtered by office location</span>
+                        </div>
+                        <div class="trace-step">
+                          <span class="trace-step-tag">2. Relevant Entities</span>
+                          <span class="trace-step-val">Employee profiles & Trip records</span>
+                        </div>
+                        <div class="trace-step">
+                          <span class="trace-step-tag">3. Schema Pruning</span>
+                          <span class="trace-step-val">Isolates candidate tables and foreign key joins</span>
+                        </div>
+                        <div class="trace-step">
+                          <span class="trace-step-tag">4. Column Selection</span>
+                          <span class="trace-step-val">Filters down to office city, employee id, trip status</span>
+                        </div>
+                        <div class="trace-step">
+                          <span class="trace-step-tag">5. Validated SQL & Execution</span>
+                          <span class="trace-step-val">SQL generated &rarr; AST validated &rarr; Executed &rarr; JSON
+                            returned</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Tech Stack Pills -->
+                    <div class="mt-3 pt-2 border-top-subtle">
+                      <div class="d-flex flex-wrap gap-1">
+                        <span class="badge tech-pill">Python</span>
+                        <span class="badge tech-pill">Flask</span>
+                        <span class="badge tech-pill">LangGraph</span>
+                        <span class="badge tech-pill">LangChain</span>
+                        <span class="badge tech-pill">PostgreSQL</span>
+                        <span class="badge tech-pill">SQLDatabaseChain</span>
+                        <span class="badge tech-pill">SQLCoder</span>
+                        <span class="badge tech-pill">Reasoning LLM</span>
+                        <span class="badge tech-pill">vLLM</span>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================
+               PROJECT 03: Production-Oriented AI SQL Chatbot
+               ============================================== -->
+          <div class="col-lg-6 project-item" data-category="agentic">
+            <div class="project-card glass-panel p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                  <span class="badge bg-violet-subtle text-violet font-mono text-xs px-2 py-1">PROJECT 03</span>
+                  <span class="badge badge-category">LLM &middot; SQL Agent &middot; LangGraph &middot; Production
+                    Architecture</span>
+                </div>
+                <h3 class="project-title h4 text-light mb-2">Production-Oriented AI SQL Chatbot</h3>
+
+                <p class="text-muted-custom text-sm mb-3">
+                  A hardened SQL agent engineered with a Flask REST API and LangGraph workflow, transitioning simple
+                  prompt execution into a resilient, production-oriented database conversational interface.
+                </p>
+
+                <!-- Engineering Goal Callout -->
+                <div class="p-3 rounded-2 bg-panel-darker border-left-violet mb-4">
+                  <span class="font-mono text-xs text-uppercase tracking-wider text-violet d-block mb-1">Engineering
+                    Goal</span>
+                  <p class="text-xs text-light mb-0">
+                    “Move beyond a simple text-to-SQL prompt and create a structured workflow with routing, schema
+                    selection, SQL generation, validation, and structured output.”
+                  </p>
+                </div>
+
+                <!-- Comparison Visual: Simple vs My Approach -->
+                <div class="comparison-block mb-4 p-3 rounded-2 bg-dark-panel border border-subtle">
+                  <div class="comparison-row mb-3 pb-3 border-bottom-subtle">
+                    <span class="comparison-label text-danger font-mono text-xs d-block mb-1">&cross; Simple LLM
+                      Approach (Fragile)</span>
+                    <div class="comparison-flow text-xs font-mono text-muted">
+                      Question &rarr; Single Prompt LLM &rarr; Raw SQL (Unchecked / Prone to hallucinations)
+                    </div>
+                  </div>
+                  <div class="comparison-row">
+                    <span class="comparison-label text-emerald font-mono text-xs d-block mb-1">&check; My Engineered
+                      Workflow (Resilient)</span>
+                    <div class="comparison-flow text-xs font-mono text-cyan">
+                      Question &rarr; Router &rarr; Schema Selection &rarr; SQL Generation &rarr; Validation &rarr;
+                      Execution &rarr; Structured Response
+                    </div>
+                  </div>
+                </div>
+
+                <!-- My Contribution -->
+                <div class="mb-4">
+                  <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-2">My
+                    Contribution:</span>
+                  <ul class="text-xs text-muted-custom ps-3 mb-0">
+                    <li>Engineered Flask REST API endpoints exposing the LangGraph workflow.</li>
+                    <li>Integrated vLLM serving backend with SQLCoder and open reasoning LLMs.</li>
+                    <li>Enforced separation of responsibilities between schema pruning, generation, and validation.</li>
+                    <li>Designed structured JSON schema responses with query metadata and raw records.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-3 pt-3 border-top-subtle">
+                  <span class="badge tech-pill">Python</span>
+                  <span class="badge tech-pill">Flask</span>
+                  <span class="badge tech-pill">LangGraph</span>
+                  <span class="badge tech-pill">PostgreSQL</span>
+                  <span class="badge tech-pill">SQLCoder</span>
+                  <span class="badge tech-pill">vLLM</span>
+                </div>
+                <button class="btn btn-outline-cyan btn-sm w-100 btn-deep-dive" data-project-id="p3">
+                  <span>View Technical Architecture & Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- ==============================================
+               PROJECT 04: Runtime PDF RAG / Mini RAG System
+               ============================================== -->
+          <div class="col-lg-6 project-item" data-category="rag">
+            <div class="project-card glass-panel p-4 h-100 d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex flex-wrap align-items-center gap-2 mb-2">
+                  <span class="badge bg-emerald-subtle text-emerald font-mono text-xs px-2 py-1">PROJECT 04</span>
+                  <span class="badge badge-category">RAG &middot; Document Intelligence &middot; Vector Search</span>
+                </div>
+                <h3 class="project-title h4 text-light mb-2">Runtime PDF RAG / Mini RAG System</h3>
+
+                <p class="text-muted-custom text-sm mb-3">
+                  A runtime document-question-answering system where a PDF can be provided dynamically and converted
+                  into a searchable knowledge source using local embeddings and inference.
+                </p>
+
+                <!-- Workflow diagram -->
+                <div class="arch-flow-diagram mb-4 p-3 rounded-2 bg-dark-panel border border-subtle">
+                  <div class="arch-node text-xs">PDF</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs">Text Extraction</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs">Chunking</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs">Embedding</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs node-highlight-cyan">Qdrant</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs">Retrieval</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs">Ollama / Llama 3.2</div>
+                  <span class="arch-arrow">&rarr;</span>
+                  <div class="arch-node text-xs">Answer</div>
+                </div>
+
+                <!-- My Contribution -->
+                <div class="mb-4">
+                  <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-2">My
+                    Contribution:</span>
+                  <ul class="text-xs text-muted-custom ps-3 mb-0">
+                    <li>Designed the document ingestion pipeline for runtime PDF processing.</li>
+                    <li>Worked on PDF text extraction and multi-page stream parsing.</li>
+                    <li>Implemented chunking strategies suited for document-specific sections.</li>
+                    <li>Integrated embedding generation using <code class="text-cyan">nomic-embed-text</code>.</li>
+                    <li>Stored embeddings in local Qdrant collections with dynamic collection lifecycles.</li>
+                    <li>Implemented semantic retrieval and integrated Ollama with <code
+                        class="text-cyan">Llama 3.2</code>.</li>
+                    <li>Designed the grounded question-answering workflow with source page citation.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div>
+                <div class="d-flex flex-wrap gap-1 mb-3 pt-3 border-top-subtle">
+                  <span class="badge tech-pill">Python</span>
+                  <span class="badge tech-pill">FastAPI</span>
+                  <span class="badge tech-pill">Qdrant</span>
+                  <span class="badge tech-pill">Ollama</span>
+                  <span class="badge tech-pill">Llama 3.2</span>
+                  <span class="badge tech-pill">nomic-embed-text</span>
+                </div>
+                <button class="btn btn-outline-cyan btn-sm w-100 btn-deep-dive" data-project-id="p4">
+                  <span>View Technical Architecture & Details</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4 — AGENT FRAMEWORKS I WORK WITH (INTERACTIVE TECHNOLOGY MAP) -->
+    <section id="frameworks" class="py-6 position-relative bg-charcoal-deep border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Ecosystem Mastery</div>
+        <h2 class="section-title">Agent Frameworks I Work With</h2>
+        <p class="section-subtitle text-muted-custom mb-5 max-w-750">
+          An interactive map of orchestration layers, vector databases, inference runtimes, and databases I integrate
+          into end-to-end AI applications.
+        </p>
+
+        <div class="row g-4 align-items-center">
+          <!-- Interactive Connected Tech Nodes Map -->
+          <div class="col-lg-7">
+            <div class="tech-map-canvas-card glass-panel p-4 position-relative">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="font-mono text-xs text-uppercase tracking-wider text-cyan">Interactive Technology
+                  Map</span>
+                <span class="font-mono text-xs text-muted-custom">Hover or Click Node</span>
+              </div>
+
+              <!-- Tech Ecosystem Interactive Grid -->
+              <div class="tech-nodes-network">
+                <!-- Center Core Hub -->
+                <div class="center-hub">
+                  <div class="hub-circle">
+                    <span class="hub-label">AI APPLICATION</span>
+                    <span class="hub-sub font-mono">Jaymin Dabhi</span>
+                  </div>
+                </div>
+
+                <!-- Satellite Framework Nodes -->
+                <div class="network-node node-langgraph" data-tech-id="langgraph">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">LangGraph</span>
+                </div>
+                <div class="network-node node-langchain" data-tech-id="langchain">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">LangChain</span>
+                </div>
+                <div class="network-node node-llamaindex" data-tech-id="llamaindex">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">LlamaIndex</span>
+                </div>
+                <div class="network-node node-openai" data-tech-id="openai">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">OpenAI</span>
+                </div>
+                <div class="network-node node-bedrock" data-tech-id="bedrock">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">AWS Bedrock</span>
+                </div>
+                <div class="network-node node-ollama" data-tech-id="ollama">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">Ollama</span>
+                </div>
+                <div class="network-node node-qdrant" data-tech-id="qdrant">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">Qdrant</span>
+                </div>
+                <div class="network-node node-chromadb" data-tech-id="chromadb">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">ChromaDB</span>
+                </div>
+                <div class="network-node node-pinecone" data-tech-id="pinecone">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">Pinecone</span>
+                </div>
+                <div class="network-node node-postgres" data-tech-id="postgres">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">PostgreSQL</span>
+                </div>
+                <div class="network-node node-vllm" data-tech-id="vllm">
+                  <div class="node-bullet"></div>
+                  <span class="node-title">vLLM</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Tech Inspector Box -->
+          <div class="col-lg-5">
+            <div class="tech-inspector-card glass-panel p-4 rounded-3 border-cyan-subtle" id="techInspector">
+              <div class="d-flex align-items-center gap-2 mb-2">
+                <span class="badge bg-cyan text-dark font-mono text-xs" id="techCategoryBadge">FRAMEWORK</span>
+                <span class="font-mono text-xs text-muted-custom" id="techVersion">Hands-on Production Use</span>
+              </div>
+              <h3 class="h4 text-light mb-3" id="techName">LangGraph</h3>
+
+              <div class="p-3 bg-panel-darker rounded-2 border border-subtle mb-3">
+                <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-1">How I use
+                  it:</span>
+                <p class="text-sm text-cyan mb-0" id="techUsage">
+                  “Workflow orchestration for stateful multi-agent systems.”
+                </p>
+              </div>
+
+              <div class="mb-3">
+                <span
+                  class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-1">Architectural
+                  Role:</span>
+                <p class="text-xs text-muted-custom mb-0" id="techRole">
+                  Provides directed cyclic graph structures to model multi-turn agent dialogues, fallback loops, tool
+                  validation, and state persistence without infinite recursion.
+                </p>
+              </div>
+
+              <div class="pt-3 border-top-subtle">
+                <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-1">Applied
+                  In:</span>
+                <span class="font-mono text-xs text-light" id="techProject">Text-to-SQL Multi-Agent System &middot;
+                  Production SQL Chatbot</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5 — MY AI SYSTEM DESIGN PHILOSOPHY -->
+    <section id="philosophy" class="py-6 position-relative border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Engineering Principles</div>
+        <h2 class="section-title">How I Approach AI Engineering</h2>
+        <p class="section-subtitle text-muted-custom mb-5 max-w-750">
+          Core convictions derived from debugging real multi-agent flows, vector search edge cases, and schema explosion
+          challenges.
+        </p>
+
+        <div class="row g-4">
+          <!-- Principle 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="philosophy-card glass-panel p-4 h-100 border-top-cyan">
+              <span class="principle-number font-mono">01</span>
+              <h3 class="principle-title h5 text-light mb-2">Model Is Only One Component</h3>
+              <p class="text-muted-custom text-sm mb-0">
+                An LLM alone is not the complete application. Reliability stems from the orchestration harness, routing
+                logic, validation layers, and structured error recovery surrounding it.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="philosophy-card glass-panel p-4 h-100 border-top-indigo">
+              <span class="principle-number font-mono">02</span>
+              <h3 class="principle-title h5 text-light mb-2">Give Agents Tools</h3>
+              <p class="text-muted-custom text-sm mb-0">
+                Agents become useful when they can retrieve verified information, query operational databases, or
+                interact with external system APIs deterministically rather than guessing answers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="philosophy-card glass-panel p-4 h-100 border-top-emerald">
+              <span class="principle-number font-mono">03</span>
+              <h3 class="principle-title h5 text-light mb-2">Control the Context</h3>
+              <p class="text-muted-custom text-sm mb-0">
+                Relevant context is often more important than simply increasing the model parameter size. Intelligent
+                schema pruning and noise filtering preserve attention and prevent hallucination.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="col-md-6 col-lg-6">
+            <div class="philosophy-card glass-panel p-4 h-100 border-top-violet">
+              <span class="principle-number font-mono">04</span>
+              <h3 class="principle-title h5 text-light mb-2">Validate LLM Output</h3>
+              <p class="text-muted-custom text-sm mb-0">
+                Generated SQL and other structured outputs should be validated before execution or downstream
+                consumption. Deterministic syntax parsers and type validators protect the database and application
+                layers.
+              </p>
+            </div>
+          </div>
+
+          <!-- Principle 5 -->
+          <div class="col-md-12 col-lg-6">
+            <div class="philosophy-card glass-panel p-4 h-100 border-top-amber">
+              <span class="principle-number font-mono">05</span>
+              <h3 class="principle-title h5 text-light mb-2">Modular Workflows</h3>
+              <p class="text-muted-custom text-sm mb-0">
+                Complex AI applications should be divided into understandable, testable components and specialized
+                agents. Single-prompt monolithic chains fail unpredictably; decomposed state graphs fail gracefully.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6 — TECHNICAL DEEP DIVE -->
+    <section id="deep-dive" class="py-6 position-relative bg-charcoal-deep border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Architectural Analysis</div>
+        <h2 class="section-title">Technical Deep Dive</h2>
+        <p class="section-subtitle text-muted-custom mb-5 max-w-750">
+          Select an architectural domain to examine the underlying tools, design rationale, edge challenges, and
+          production enhancements.
+        </p>
+
+        <!-- Domain Selection Tabs -->
+        <div class="deep-dive-tab-bar mb-4 d-flex flex-wrap gap-2">
+          <button class="btn btn-deep-dive-tab active" data-tab="rag">RAG Architecture</button>
+          <button class="btn btn-deep-dive-tab" data-tab="text-to-sql">Text-to-SQL</button>
+          <button class="btn btn-deep-dive-tab" data-tab="multi-agent">Multi-Agent Orchestration</button>
+          <button class="btn btn-deep-dive-tab" data-tab="vector-search">Vector Search & Storage</button>
+          <button class="btn btn-deep-dive-tab" data-tab="llm-inference">LLM Inference & Serving</button>
+        </div>
+
+        <!-- Deep Dive Dynamic Content Container -->
+        <div class="glass-panel p-4 p-lg-5 rounded-4 border-subtle" id="deepDiveContentArea">
+          <!-- Content dynamically rendered via JS based on selected tab -->
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7 — ENGINEERING CHALLENGES -->
+    <section id="challenges" class="py-6 position-relative border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Real Engineering Insights</div>
+        <h2 class="section-title">Engineering Challenges</h2>
+        <p class="section-subtitle text-muted-custom mb-5 max-w-750">
+          Practical obstacles encountered and tackled while developing agent workflows, RAG retrievers, and SQL
+          generation pipelines.
+        </p>
+
+        <div class="row g-4">
+          <!-- Challenge 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="challenge-card glass-panel p-4 h-100">
+              <div class="challenge-header d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-indigo-subtle text-indigo font-mono text-xs">CHALLENGE 01</span>
+                <span class="font-mono text-xs text-muted-custom">Information Retrieval</span>
+              </div>
+              <h3 class="h5 text-light mb-2">Retrieval Quality</h3>
+              <p class="text-xs text-cyan mb-2">How to retrieve useful context instead of irrelevant chunks.</p>
+              <p class="text-sm text-muted-custom mb-0">
+                Raw similarity metrics can return semantically close but contextually irrelevant fragments. Mitigated by
+                testing boundary-aware chunking, hybrid keyword/vector search, and context filtering before feeding
+                prompt templates.
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="challenge-card glass-panel p-4 h-100">
+              <div class="challenge-header d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-cyan-subtle text-cyan font-mono text-xs">CHALLENGE 02</span>
+                <span class="font-mono text-xs text-muted-custom">Context Management</span>
+              </div>
+              <h3 class="h5 text-light mb-2">Context Size</h3>
+              <p class="text-xs text-cyan mb-2">How to avoid sending unnecessary information to the LLM.</p>
+              <p class="text-sm text-muted-custom mb-0">
+                Large contexts incur latency, increase cost, and dilute the model's focus ("lost in the middle"). Solved
+                by strict token budget allocation and dynamic schema filtering tailored to the user's specific query
+                intent.
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="challenge-card glass-panel p-4 h-100">
+              <div class="challenge-header d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-emerald-subtle text-emerald font-mono text-xs">CHALLENGE 03</span>
+                <span class="font-mono text-xs text-muted-custom">Relational Data</span>
+              </div>
+              <h3 class="h5 text-light mb-2">Database Schema Complexity</h3>
+              <p class="text-xs text-cyan mb-2">How to deal with large database schemas in Text-to-SQL.</p>
+              <p class="text-sm text-muted-custom mb-0">
+                Real enterprise databases contain dozens of tables with complex foreign keys. Dumping complete DDLs
+                fails prompt limits and induces foreign key hallucination. Tackled via dedicated Column Selection agents
+                that prune tables.
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="challenge-card glass-panel p-4 h-100">
+              <div class="challenge-header d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-violet-subtle text-violet font-mono text-xs">CHALLENGE 04</span>
+                <span class="font-mono text-xs text-muted-custom">Safety & Guardrails</span>
+              </div>
+              <h3 class="h5 text-light mb-2">SQL Reliability</h3>
+              <p class="text-xs text-cyan mb-2">How to validate generated SQL before execution.</p>
+              <p class="text-sm text-muted-custom mb-0">
+                LLMs can occasionally output syntactically invalid SQL, Cartesian joins, or destructive clauses. Built
+                deterministic pre-execution validation checks that parse ASTs, restrict queries to read-only semantics,
+                and verify column existence.
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="challenge-card glass-panel p-4 h-100">
+              <div class="challenge-header d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-amber-subtle text-amber font-mono text-xs">CHALLENGE 05</span>
+                <span class="font-mono text-xs text-muted-custom">Multi-Agent Control</span>
+              </div>
+              <h3 class="h5 text-light mb-2">Agent Orchestration</h3>
+              <p class="text-xs text-cyan mb-2">How to divide a complex workflow into specialized agents.</p>
+              <p class="text-sm text-muted-custom mb-0">
+                Single monolithic agents lose track of sub-goals. Designed LangGraph cyclic graphs where
+                responsibilities are cleanly isolated: Routing &rarr; Schema Pruning &rarr; SQL Generation &rarr;
+                Validation, with explicit state schemas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Challenge 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="challenge-card glass-panel p-4 h-100">
+              <div class="challenge-header d-flex justify-content-between align-items-center mb-3">
+                <span class="badge bg-pink-subtle text-pink font-mono text-xs">CHALLENGE 06</span>
+                <span class="font-mono text-xs text-muted-custom">Inference Trade-offs</span>
+              </div>
+              <h3 class="h5 text-light mb-2">Model Selection</h3>
+              <p class="text-xs text-cyan mb-2">How to decide between hosted and open-source models.</p>
+              <p class="text-sm text-muted-custom mb-0">
+                Evaluating hosted endpoints (OpenAI, Bedrock) against self-hosted models (Ollama, SQLCoder on vLLM).
+                Balance considerations include data privacy, inference latency, cold starts, cost per token, and
+                domain-specific SQL specialization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8 — ABOUT ME -->
+    <section id="about" class="py-6 position-relative bg-charcoal-deep border-top-subtle">
+      <div class="container container-xl">
+        <div class="section-badge mb-2">Profile & Background</div>
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-6">
+            <h2 class="section-title mb-3">Jaymin Dabhi — AI Engineer</h2>
+            <p class="lead text-light mb-4">
+              “I am an Information Technology engineer focused on building practical Generative AI systems. My work
+              includes RAG pipelines, agentic workflows, Text-to-SQL systems, vector databases, LLM integrations and AI
+              application architecture.”
+            </p>
+
+            <div class="profile-meta-list mb-4">
+              <div class="meta-item d-flex align-items-baseline gap-2 mb-2">
+                <span class="font-mono text-xs text-cyan min-w-100">Degree:</span>
+                <span class="text-sm text-light">B.E. in Information Technology (2024)</span>
+              </div>
+              <div class="meta-item d-flex align-items-baseline gap-2 mb-2">
+                <span class="font-mono text-xs text-cyan min-w-100">Institution:</span>
+                <span class="text-sm text-light">Shantilal Shah Engineering College (GTU)</span>
+              </div>
+              <div class="meta-item d-flex align-items-baseline gap-2 mb-2">
+                <span class="font-mono text-xs text-cyan min-w-100">Target Role:</span>
+                <span class="text-sm text-light">AI Engineer / Generative AI Engineer</span>
+              </div>
+            </div>
+
+            <div class="focus-areas-box p-3 rounded-3 bg-panel-darker border border-subtle">
+              <span class="font-mono text-xs text-uppercase tracking-wider text-muted-custom d-block mb-2">Current
+                Technical Focus:</span>
+              <div class="d-flex flex-wrap gap-2">
+                <span class="badge tech-pill">Generative AI</span>
+                <span class="badge tech-pill">Agentic AI</span>
+                <span class="badge tech-pill">RAG</span>
+                <span class="badge tech-pill">LLM Engineering</span>
+                <span class="badge tech-pill">Multi-Agent Systems</span>
+                <span class="badge tech-pill">Text-to-SQL</span>
+                <span class="badge tech-pill">Vector Databases</span>
+                <span class="badge tech-pill">LLM Orchestration</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="glass-panel p-4 p-lg-5 rounded-4 border-cyan-subtle">
+              <h3 class="h5 text-light mb-4 d-flex align-items-center gap-2">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  class="text-cyan">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+                  <polyline points="22 4 12 14.01 9 11.01" />
+                </svg>
+                Core AI Engineering Stack
+              </h3>
+
+              <div class="stack-category mb-3">
+                <span class="font-mono text-xs text-muted-custom text-uppercase d-block mb-1">Languages &
+                  Frameworks:</span>
+                <span class="text-sm text-light">Python, Django, Flask, LangChain, LangGraph, LlamaIndex</span>
+              </div>
+
+              <div class="stack-category mb-3">
+                <span class="font-mono text-xs text-muted-custom text-uppercase d-block mb-1">Models & APIs:</span>
+                <span class="text-sm text-light">OpenAI APIs, AWS Bedrock, Ollama, SQLCoder, vLLM</span>
+              </div>
+
+              <div class="stack-category mb-3">
+                <span class="font-mono text-xs text-muted-custom text-uppercase d-block mb-1">Vector DBs & Relational
+                  Storage:</span>
+                <span class="text-sm text-light">Qdrant, FAISS, ChromaDB, Pinecone, PostgreSQL, MySQL</span>
+              </div>
+
+              <div class="stack-category">
+                <span class="font-mono text-xs text-muted-custom text-uppercase d-block mb-1">Infrastructure &
+                  Tools:</span>
+                <span class="text-sm text-light">Docker, Git, REST APIs, Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 9 — CONTACT SECTION -->
+    <section id="contact" class="py-6 position-relative border-top-subtle">
+      <div class="container container-xl">
+        <div class="contact-box glass-panel p-4 p-md-5 rounded-4 text-center max-w-800 mx-auto border-cyan-glow">
+          <div class="section-badge mb-2">Collaboration</div>
+          <h2 class="display-5 fw-bold text-light mb-3">Let's Build Intelligent Systems</h2>
+          <p class="text-muted-custom mb-5 max-w-600 mx-auto">
+            Open to AI Engineer opportunities focused on multi-agent frameworks, enterprise RAG, and production LLM
+            system architecture.
+          </p>
+
+          <div class="row g-3 justify-content-center mb-5 text-start">
+            <!-- Email -->
+            <div class="col-sm-6 col-md-3">
+              <a href="mailto:dabhijaymin123@gmail.com"
+                class="contact-item-card contact-link-card card-cyan p-3 rounded-3 bg-panel-darker border border-subtle text-center text-decoration-none d-flex flex-column justify-content-center h-100">
+                <div class="font-mono text-xs text-muted-custom mb-1">EMAIL</div>
+                <div class="text-light text-sm font-mono d-inline-flex align-items-center justify-content-center gap-1">
+                  <span>dabhijaymin123@gmail.com</span>
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="text-cyan">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="font-mono text-xs text-muted-custom mt-1" style="font-size: 0.68rem;">Click to send email</div>
+              </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="col-sm-6 col-md-3">
+              <div class="contact-item-card p-3 rounded-3 bg-panel-darker border border-subtle text-center h-100 d-flex flex-column justify-content-center">
+                <div class="font-mono text-xs text-muted-custom mb-1">LINKEDIN</div>
+                <div class="text-cyan text-sm font-mono fw-semibold">Jaymin Dabhi</div>
+                <div class="font-mono text-xs text-muted-custom mt-1" style="font-size: 0.68rem;">AI Engineer Profile</div>
+              </div>
+            </div>
+
+            <!-- GitHub -->
+            <div class="col-sm-6 col-md-3">
+              <div class="contact-item-card p-3 rounded-3 bg-panel-darker border border-subtle text-center h-100 d-flex flex-column justify-content-center">
+                <div class="font-mono text-xs text-muted-custom mb-1">GITHUB</div>
+                <div class="text-cyan text-sm font-mono fw-semibold">Jaymin Dabhi</div>
+                <div class="font-mono text-xs text-muted-custom mt-1" style="font-size: 0.68rem;">Code & Repositories</div>
+              </div>
+            </div>
+
+            <!-- Resume (Clickable Card / Button) -->
+            <div class="col-sm-6 col-md-3">
+              <a href="https://drive.google.com/file/d/1h9nOte6R_s_iEJdRz24cBmzxjoQjfMjZ/view?usp=drivesdk"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="contact-item-card contact-link-card p-3 rounded-3 bg-panel-darker border border-subtle text-center text-decoration-none d-flex flex-column justify-content-center h-100"
+                title="Click to open Jaymin Dabhi's Resume in Google Drive">
+                <div class="font-mono text-xs text-muted-custom mb-1">RESUME</div>
+                <div class="text-emerald text-sm font-mono fw-semibold d-inline-flex align-items-center justify-content-center gap-1">
+                  <span>View Resume</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </div>
+                <div class="font-mono text-xs text-emerald mt-1" style="font-size: 0.68rem;">
+                  Google Drive &middot; PDF &rarr;
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="pt-3 border-top-subtle font-mono text-xs text-muted-custom">
+            Available for AI Engineer &middot; Generative AI Engineer &middot; Agentic Systems Roles
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="py-4 border-top-subtle bg-black">
+    <div class="container container-xl d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+      <div class="d-flex align-items-center gap-2">
+        <span class="brand-monogram">JD</span>
+        <span class="text-sm text-light fw-bold">Jaymin Dabhi</span>
+        <span class="text-xs text-muted-custom">&middot; AI Engineer Portfolio</span>
+      </div>
+      <div class="font-mono text-xs text-muted-custom">
+        Designed for AI Agent Frameworks & Production System Evaluation
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==============================================
+       FULL PROJECT DEEP DIVE MODAL (10 Points)
+       ============================================== -->
+  <div class="modal fade" id="projectDeepDiveModal" tabindex="-1" aria-labelledby="deepDiveModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+      <div class="modal-content glass-modal-content border-cyan-subtle">
+
+        <div class="modal-header border-bottom-subtle p-4">
+          <div>
+            <div class="d-flex align-items-center gap-2 mb-1">
+              <span class="badge bg-cyan text-dark font-mono text-xs" id="modalProjectCategory">CATEGORY</span>
+              <span class="font-mono text-xs text-muted-custom" id="modalProjectId">PROJECT 00</span>
+            </div>
+            <h2 class="modal-title h4 text-light" id="deepDiveModalLabel">Project Title</h2>
+          </div>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body p-4 p-lg-5" id="modalBodyContent">
+          <!-- Dynamically populated from js/data.js -->
+        </div>
+
+        <div class="modal-footer border-top-subtle p-3 d-flex justify-content-between">
+          <span class="font-mono text-xs text-muted-custom">System Architecture Specification &middot; Jaymin
+            Dabhi</span>
+          <button type="button" class="btn btn-secondary-glass btn-sm" data-bs-dismiss="modal">Close Deep Dive</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap 5 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Project Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/hero-canvas.js"></script>
+  <script src="js/visualizers.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
